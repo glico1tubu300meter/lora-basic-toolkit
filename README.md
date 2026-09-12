@@ -4,6 +4,10 @@ QLoRA(4bit量子化 + LoRA)によるローカルLLMファインチューニン�
 
 対象モデルはデフォルトで [Qwen2.5-7B-Instruct](https://huggingface.co/Qwen/Qwen2.5-7B-Instruct)。`--model` オプションで他の Hugging Face モデルにも変更できる。
 
+![ハイパーパラメータ比較](assets/hparam_sweep.png)
+
+*rank/学習率を変えた2条件での学習ロス・トークン正解率の推移(4bit量子化, Qwen2.5-7B-Instruct)。rankを上げても学習率を下げると収束が遅くなる、というよくあるトレードオフが実測でも確認できる。*
+
 ## 動作環境
 
 - NVIDIA GPU (CUDA)、VRAM 11GB以上を推奨(7Bモデル・4bit量子化での動作確認は GTX 1080 Ti で実施)
